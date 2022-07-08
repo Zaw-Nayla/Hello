@@ -16,85 +16,76 @@ class MyApp extends StatelessWidget {
           title: const Text("Hello"),
         ),
         body: Center(
-          child: Container(
-            height: 300,
-            width: 250,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              color: Colors.blueGrey,
-            ),
-            child: Column(
-              children: [
-                const SizedBox(height: 20),
-                const Image(
-                  image: AssetImage("images/pp.png"),
-                  height: 120,
-                  width: 120,
-                ),
-                const SizedBox(height: 10),
-                const Text(
-                  'Zaw Nay La',
-                  style: TextStyle(
-                      fontWeight: FontWeight.bold, color: Colors.white),
-                ),
-                const SizedBox(
-                  height: 10,
-                ),
-                const Text(
-                  'the Banished',
-                  style: TextStyle(color: Colors.white),
-                ),
-                const SizedBox(
-                  height: 20,
-                ),
-                SizedBox(
-                  child: IntrinsicWidth(
-                    child: Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            color: Colors.white,
-                          ),
-                          child: Row(
-                            children: const [
-                              Padding(padding: EdgeInsets.only(left: 8)),
-                              Icon(
-                                Icons.phone,
-                                size: 20,
+          child: Card(
+            color: const Color.fromARGB(255, 50, 48, 48),
+            shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.all(Radius.circular(10))),
+            child: Container(
+              padding: const EdgeInsets.all(20),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Image(
+                    image: AssetImage("images/pp.png"),
+                    height: 120,
+                    width: 120,
+                  ),
+                  const SizedBox(height: 10),
+                  const Text(
+                    'Eddie Munson',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: "lebra"),
+                  ),
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  const Text(
+                    'the Banished',
+                    style: TextStyle(color: Colors.white,
+                    fontFamily:"lebra"),
+                  ),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  SizedBox(
+                    child: IntrinsicWidth(
+                      child: Column(
+                        children:const [
+                          SizedBox(
+                            child: ListTile(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
+                              leading: Icon(Icons.phone),
+                              title: Text(
+                                '+95998682132',
+                                style: TextStyle(color: Colors.black),
                               ),
-                              Text(
-                                '+959986923318',
-                              )
-                            ],
+                              tileColor: Color.fromARGB(255, 215, 210, 209),
+                            ),
                           ),
-                        ),
-                        const SizedBox(
-                          height: 20,
-                        ),
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(4),
-                            color: Colors.white,
+                          SizedBox(
+                            height: 20,
                           ),
-                          child: Row(
-                            children: const [
-                              Padding(padding: EdgeInsets.only(left: 8)),
-                              Icon(
-                                Icons.mail,
-                                size: 20,
+                          SizedBox(
+                            child: ListTile(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius:
+                                      BorderRadius.all(Radius.circular(10))),
+                              leading: Icon(Icons.mail),
+                              title: Text(
+                                'Eddie.theBanished@gmail.com',
                               ),
-                              Text(
-                                ' Eddie.theBanished@gmail.com',
-                              )
-                            ],
+                              tileColor: Color.fromARGB(255, 215, 210, 209),
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
         ),
